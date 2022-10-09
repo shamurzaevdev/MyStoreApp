@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BuyViewController.swift
 //  MyStoreApp
 //
 //  Created by Эл on 07.10.2022.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+/// There are we can order our products
+
+final class BuyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
