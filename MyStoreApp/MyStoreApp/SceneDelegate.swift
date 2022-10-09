@@ -11,34 +11,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
         
-        let forYouVC = ForYouViewController()
-        forYouVC.tabBarItem = UITabBarItem(title: "For you", image: UIImage(systemName: "person.circle"), tag: 0)
-        let forYouNavController = UINavigationController(rootViewController: forYouVC)
-        
-        let buyVC = BuyViewController()
-        buyVC.tabBarItem = UITabBarItem(title: "For you", image: UIImage(named: "laptop"), tag: 1)
-        let buyNavController = UINavigationController(rootViewController: buyVC)
-        
-        let searchVC = SearchViewController()
-        searchVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
-        let searchNavController = UINavigationController(rootViewController: searchVC)
-        
-        let trashVC = OrderCartViewController()
-        trashVC.tabBarItem = UITabBarItem(title: "For you", image: UIImage(systemName: "bag"), tag: 3)
-        let trashNavController = UINavigationController(rootViewController: trashVC)
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [buyNavController, forYouNavController, searchNavController, trashNavController]
+
+        let tabBarController = MainTabBarViewController()
         window?.rootViewController = tabBarController
         window?.backgroundColor = .systemBackground
         window?.makeKeyAndVisible()
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -9,7 +9,7 @@ import UIKit
 
 /// MVC - View part of project
 
-final class SearchViews: UIView {
+final class SearchView: UIView {
     
     lazy var searchLabel: UILabel = {
         let label = UILabel()
@@ -125,7 +125,7 @@ final class SearchViews: UIView {
         return image
     }()
 
-    lazy var caseViewOne: UIView = {
+    lazy var caseOneView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 15, y: 255, width: 150, height: 200)
         view.backgroundColor = .systemGray6
@@ -134,7 +134,7 @@ final class SearchViews: UIView {
         return view
     }()
 
-    lazy var caseViewTwo: UIView = {
+    lazy var caseTwoView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 180, y: 255, width: 150, height: 200)
         view.backgroundColor = .systemGray6
@@ -143,7 +143,7 @@ final class SearchViews: UIView {
         return view
     }()
 
-    lazy var caseViewThree: UIView = {
+    lazy var caseThreeView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 345, y: 255, width: 150, height: 200)
         view.backgroundColor = .systemGray6

@@ -13,7 +13,7 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Private properties
 
-    private var searchViews = SearchViews()
+    private var searchViews = SearchView()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -29,8 +29,8 @@ final class SearchViewController: UIViewController {
         view.addSubview(searchViews.beatsLable)
         view.addSubview(searchViews.clearButton)
         view.addSubview(searchViews.requestsHistory)
-        view.addSubview(searchViews.caseViewOne)
-        view.addSubview(searchViews.caseViewTwo)
+        view.addSubview(searchViews.caseOneView)
+        view.addSubview(searchViews.caseTwoView)
         view.addSubview(searchViews.searchBar)
         view.addSubview(searchViews.recentlyViewedLabel)
         view.addSubview(searchViews.airPodsLable)
@@ -38,23 +38,23 @@ final class SearchViewController: UIViewController {
         view.addSubview(searchViews.iPhoneLable)
         view.addSubview(searchViews.iPhoneImageView)
         view.addSubview(searchViews.beatsImageView)
-        view.addSubview(searchViews.caseViewThree)
-        searchViews.caseViewOne.addSubview(searchViews.caseViewOneLable)
-        searchViews.caseViewTwo.addSubview(searchViews.caseViewTwoImageView)
-        searchViews.caseViewThree.addSubview(searchViews.caseViewThreeLable)
-        searchViews.caseViewOne.addSubview(searchViews.caseViewOneImageView)
-        searchViews.caseViewTwo.addSubview(searchViews.caseViewTwoLable)
-        searchViews.caseViewThree.addSubview(searchViews.caseViewThreeImageView)
+        view.addSubview(searchViews.caseThreeView)
+        searchViews.caseOneView.addSubview(searchViews.caseViewOneLable)
+        searchViews.caseTwoView.addSubview(searchViews.caseViewTwoImageView)
+        searchViews.caseThreeView.addSubview(searchViews.caseViewThreeLable)
+        searchViews.caseOneView.addSubview(searchViews.caseViewOneImageView)
+        searchViews.caseTwoView.addSubview(searchViews.caseViewTwoLable)
+        searchViews.caseThreeView.addSubview(searchViews.caseViewThreeImageView)
         recognizeGesture()
     }
 
     private func recognizeGesture() {
-        searchViews.caseViewOne.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
-        searchViews.caseViewOne.tag = 1
-        searchViews.caseViewTwo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
-        searchViews.caseViewTwo.tag = 2
-        searchViews.caseViewThree.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
-        searchViews.caseViewThree.tag = 3
+        searchViews.caseOneView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
+        searchViews.caseOneView.tag = 1
+        searchViews.caseTwoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
+        searchViews.caseTwoView.tag = 2
+        searchViews.caseThreeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction)))
+        searchViews.caseThreeView.tag = 3
     }
 
     // MARK: - Objc Methods
